@@ -17,6 +17,7 @@
     html: '<div id="basic-demo" ></div>',
     js: './basic.demo.js',
     source: './Basic.js',
+    horiz: false,
     open: true
 }
 ````

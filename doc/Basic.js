@@ -11,7 +11,7 @@ class Button extends React.Component {
     }
     render() {
         const self = this
-        let props = spreadProps(
+        let domProps = spreadProps(
                 self.props,
                 {
                     className: 'btn',
@@ -33,10 +33,10 @@ class Button extends React.Component {
             <div>
                 <pre onClick={() => {
                     self.props.onClickCode()
-                }} >{JSON.stringify(props, null, 4)}</pre>
+                }} >{JSON.stringify(domProps, null, 4)}</pre>
                 <button
                     type="button"
-                    {...props}
+                    {...domProps}
                 >[{self.props.children}]</button>
                 <hr />
             </div>
