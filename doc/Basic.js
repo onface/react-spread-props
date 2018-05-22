@@ -43,7 +43,7 @@ class Button extends React.Component {
         )
     }
 }
-Button.propTypes = {
+Button.defaultProps = {
     onClickCode: () => {}
 }
 class Basic extends React.Component {
