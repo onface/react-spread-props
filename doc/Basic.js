@@ -11,21 +11,29 @@ class Button extends React.Component {
     }
     render() {
         const self = this
-        let props = spreadProps(self.props, {
-                className: 'btn',
-                style: {border: '1px solid skyblue'},
-                onClick: function (e) {
-                    console.log('click btn')
+        let props = spreadProps(
+                self.props,
+                {
+                    className: 'btn',
+                    style: {border: '1px solid skyblue'},
+                    onClick: function (e) {
+                        console.log('click btn')
+                    },
+                    onMouseDown: function (e) {
+                        // 调用 stopTrigger 后
+                        // <Button onMouseDown={} 的 onMouseDown 将不会触发
+                        this.stopTrigger()
+                    }
                 },
-                onMouseDown: function (e) {
-                    // 调用 stopTrigger 后
-                    // <Button onMouseDown={} 的 onMouseDown 将不会触发
-                    this.stopTrigger()
+                {
+                    ignore: ['onClickCode']
                 }
-        })
+        )
         return (
             <div>
-                <pre>{JSON.stringify(props, null, 4)}</pre>
+                <pre onClick={() => {
+                    self.props.onClickCode()
+                }} >{JSON.stringify(props, null, 4)}</pre>
                 <button
                     type="button"
                     {...props}
@@ -34,6 +42,9 @@ class Button extends React.Component {
             </div>
         )
     }
+}
+Button.propTypes = {
+    onClickCode: () => {}
 }
 class Basic extends React.Component {
     render () {
@@ -68,6 +79,13 @@ class Basic extends React.Component {
                     stopTrigger
                 </Button>
 
+                <Button
+                    onClickCode={function () {
+                        console.log('click code')
+                    }}
+                >
+                    click code
+                </Button>
             </div>
         )
     }
