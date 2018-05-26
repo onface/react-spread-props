@@ -1,7 +1,7 @@
 {
     "name": "react-spread-props",
     "main": "lib/index.js",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "react spread props",
     "keywords": "",
     "scripts": {

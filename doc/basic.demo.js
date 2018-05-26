@@ -4,4 +4,3 @@ ReactDOM.render(
     <Basic />,
     document.getElementById('basic-demo')
 )
-

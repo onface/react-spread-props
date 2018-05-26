@@ -24,9 +24,6 @@ class Button extends React.Component {
                         // <Button onMouseDown={} 的 onMouseDown 将不会触发
                         this.stopTrigger()
                     }
-                },
-                {
-                    ignore: ['onClickCode']
                 }
         )
         return (
