@@ -19,9 +19,7 @@
     "$repository": "react-spread-props",
     "dependencies": {
         "debug": "^4.0.1",
-        "prop-types": "^15.6.0",
-        "safe-extend": "^3.0.5",
-        "util.react": "^1.6.0"
+        "safe-extend": "^3.0.5"
     },
     "devDependencies": {
         "babel": "^6.23.0",
