@@ -41,7 +41,8 @@ class Button extends React.Component {
     }
 }
 Button.defaultProps = {
-    onClickCode: () => {}
+    onClickCode: () => {},
+    spread: ['onMouseDown', 'onClickCode']
 }
 class Basic extends React.Component {
     render () {
@@ -75,7 +76,6 @@ class Basic extends React.Component {
                 }} >
                     stopTrigger
                 </Button>
-
                 <Button
                     onClickCode={function () {
                         console.log('click code')

@@ -9,7 +9,7 @@
 <div class="face-one-intro">
     <div class="face-one-intro-title">react-spread-props</div>
     <h2 class="face-one-intro-desc">
-        react spread props
+        <code>{...props}</code> 的同时代理绑定事件
     </h2>
     <div class="face-one-intro-tool">
         <a href="https://onface.github.io/react-spread-props" class="face-one-intro-btn face-one-intro-btn--primary mr-online-hide" >在线文档</a>
@@ -27,15 +27,15 @@
                     <img src="./doc/theme/media/cogwheel.svg" alt="" class="face-one-feature-item-photo">
                     <br />
                         <div class="face-one-feature-item-label">定制开发</div>
-                        <div class="face-one-feature-item-desc">提供样式文件便于二次开发</div>
+                        <div class="face-one-feature-item-desc">提供 <code>spread</code> 接口便于增加自定义事件</div>
                 </div>
             </td>
             <td align="center" >
                 <div class="face-one-feature-item">
-                    <img src="./doc/theme/media/browser.svg" alt="" class="face-one-feature-item-photo">
+                    <img src="./doc/theme/media/laptop.svg" alt="" class="face-one-feature-item-photo">
                     <br />
-                    <div class="face-one-feature-item-label">用户体验</div>
-                    <div class="face-one-feature-item-desc">界面细致、即时反馈，更好的用户体验</div>
+                    <div class="face-one-feature-item-label">开发体验</div>
+                    <div class="face-one-feature-item-desc">接口简洁，可控制触发用户绑定事件。</div>
                 </div>
             </td>
             <td align="center" >
