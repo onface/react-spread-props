@@ -88,6 +88,12 @@ Object.keys(spreadProps).filter(function (key) {
 
 实现功能与 `<GeneralButton />` 但代码更少更易读。(因为 `onGreaterThree` 不属于 DOM 事件，所以会被自动过滤)
 
+## style&className
+
+`props.style` 和 `props.className` 将与 `proxyProps.style` 和 `proxyProps.className` 自动合并。
+
+[示例代码](./README.md#style&className)
+
 ## stopTrigger
 
 你还可以在 `proxyProps.onClick` 中控制 `props.onClick` 触发条件。
@@ -96,7 +102,7 @@ Object.keys(spreadProps).filter(function (key) {
 let domProps = spreadProps(
     self.props,
     {
-        onClick: (e) => {
+        onClick: function (){
             // do somethings
             this.stopTrigger()
         }
@@ -112,14 +118,7 @@ let domProps = spreadProps(
 
 [示例代码](./README.md#stopTrigger)
 
-## style&className
-
-`props.style` 和 `props.className` 将与 `proxyProps.style` 和 `proxyProps.className` 自动合并。
-
-[示例代码](./README.md#style&className)
-
-
-## spread
+## 新的属性
 
 万一 `react-spread-props` 错误的将一些新的 DOM 属性过滤了请及时[通知我们](https://github.com/onface/react-spread-props/issues/new)
 
